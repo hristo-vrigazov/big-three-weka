@@ -13,6 +13,8 @@ linkcolor=black,urlcolor=black,citecolor=black,% PRINT
 bookmarks=true,bookmarksopenlevel=2]{hyperref}
 
 \usepackage{geometry}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
 % PDF VIEW
 % \geometry{total={210mm,297mm},
 % left=25mm,right=25mm,%
@@ -108,8 +110,19 @@ September 2016
 
 \input{contents.tex}
 
-\bibliographystyle{unsrt}
-\bibliography{sample}
+\begin{thebibliography}{9}
+
+\bibitem{setosa} 
+Kosaciec Szczecinkowaty
+\textit{Wikipedia article for Iris Setosa}. 
+\\\texttt{https://en.wikipedia.org/wiki/Iris\_setosa}
+
+\bibitem{versicolor} 
+D. Gordon E. Robertson
+\textit{Wikipedia article for Iris Versicolor}. 
+\\\texttt{https://en.wikipedia.org/wiki/Iris\_versicolor}
+
+\end{thebibliography}
 
 \end{document}
 
