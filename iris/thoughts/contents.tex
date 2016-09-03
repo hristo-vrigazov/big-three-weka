@@ -75,4 +75,25 @@ This is the raw dataset after standardizing all attributes, so that the mean of 
 This is the raw dataset with only petallength and petalwidth. Visually, they seem to separate the classes very well. Also, after running CFS and evaluating on the subsets and using greedy stepwise for search method, we get a result that petallength and petalwidth should be selected.
 
 \chapter{Evaluate algorithms}
-\section{Experiment description}
+\section{Initial experiment design}
+On the datasets in previous chapter, we will run the following algorithms:
+\begin{enumerate}
+    \item Logistic regression with ridge parameter 1.0E-8 without conjugate gradient descent
+    \item k-Nearest Neighbour with 3 neighbours without distance weighting
+    \item Naive Bayes
+    \item Multilayer Perceptron neural network with learning rate 0.3 and momentum 0.2
+    \item Support vector machine using sequential minimal optimization for training and logistic regression for calibrator with polykernel and 0.001 tolerance parameter
+    \item Decision tree - Pruned C4 decision tree
+    \item Adaboost - with pruned C4 decision trees instead of decision stumps
+    \item Random forest - to avoid potential overfitting of the decision tree
+\end{enumerate}
+
+We will use cross validation on 5 folds. Results are available in the Github Repository ~\cite{repo}. After running the experiment, we see no significant difference between the results in the different views of the dataset. We will therefore choose the dataset with only two attributes and run the expreriment again. We then see ~\cite{repo} that SVM gives the best result, followed by logistic regression and multilayer perceptron.
+We will concentrate on tuning these three algorithms in the next chapter and selecting one of them
+
+\chapter{Impove results}
+\section{Experiment for improving result}
+We will now run an experiment with slightly different parameters to find the optimal parameters and select a feasible model. The configurations is available in the Github reposiory ~\cite{repo}. After running the experiments, we see that the results are similar, but the SVM classifier is with highest accuracy 96.07\%, so we sill choose this algorithm.
+
+\chapter{Present results}
+The final Weka model is availble in the Github repository
