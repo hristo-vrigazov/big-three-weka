@@ -39,3 +39,40 @@ The dataset contains the following attributes ~\cite{iris}:
     \item Class - one of Iris Setosa, Iris Versicolour, Iris Virginica
 \end{enumerate}
 \section{First look at the dataset}
+The dataset contains 150 records, with 50 for each class. The attributes sepal length, sepal width, petal length and petal width vary between 0 and 8. There are no missing values.
+
+\chapter{Analyze the data}
+\section{Handling missing values}
+Since there are no missing values, we do not need to take actions to handle the missing values
+\section{Balancing classes}
+The classes are perfectly balanced, so we do not need Kappa metrics or anything like this.
+\section{Normalization and standardization}
+All attribute types are numeric, but they seem to take on values in slightly different intervals. Normalization or standardization may be beneficial.
+\section{Descriptive statistics}
+Both sepallength and sepalwidth seem to be normally distributed - see fig \ref{fig:sepal}, which means that Logistic Regresson is a good candidate, since it assumes normal distribution of the attributes. There seems to be a good separation between classes for petallength and petalwidth - see fig \ref{fig:plot_matrix}, so we should expect that a model with high accuracy exists and since SVM tries to separate the data with a line, SVM is probably an interesting choice, as are trees. Since a point is usually surrounded by points of the same class, k-nearest neighbour and other lazy methods seem like a good candidate. If we always predict the majority class, we get an accuracy of 32\%, so we should definitely aim for more than that baseline.
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.8]{sepal}
+    \caption{Sepal attributes distribution}
+    \label{fig:sepal}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.6]{plot_matrix}
+    \caption{Separations per attribute of the classes}
+    \label{fig:plot_matrix}
+\end{figure}
+
+\chapter{Prepare data}
+We will describe the different views of the dataset that we will use in future experiments.
+\section{Raw view of the dataset}
+This is the way we downloaded it from the UCI Machine Learning dataset repository
+\section{Normalized view of the dataset}
+This is the raw dataset after normalizing all attributes, so that all attributes are now between 0 and 1.
+\section{Standardized view of the dataset}
+This is the raw dataset after standardizing all attributes, so that the mean of all attributes is now 0 and the standart deviation is 1.
+\section{Dataset after feature selection}
+This is the raw dataset with only petallength and petalwidth. Visually, they seem to separate the classes very well. Also, after running CFS and evaluating on the subsets and using greedy stepwise for search method, we get a result that petallength and petalwidth should be selected.
+
+\chapter{Evaluate algorithms}
+\section{Experiment description}
