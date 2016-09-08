@@ -23,10 +23,16 @@ The dataset contains the following attributes about a person ~\cite{uci-link}:
     \item Capital gain: continuous, how much an individual has learned outside his usual wage
     \item Capital loss: continuous, how much an individual has lost outside his usual wage.
     \item Hours per week: continuous, how many hours per week an individual works
-    \item: Native country: United-States, Cambodia, England, Puerto-Rico, Canada, Germany, Outlying-US(Guam-USVI-etc), India, Japan, Greece, South, China, Cuba, Iran, Honduras, Philippines, Italy, Poland, Jamaica, Vietnam, Mexico, Portugal, Ireland, France, Dominican-Republic, Laos, Ecuador, Taiwan, Haiti, Columbia, Hungary, Guatemala, Nicaragua, Scotland, Thailand, Yugoslavia, El-Salvador, Trinadad and Tobago, Peru, Hong, Holand-Netherlands.
+    \item Native country: United-States, Cambodia, England, Puerto-Rico, Canada, Germany, Outlying-US(Guam-USVI-etc), India, Japan, Greece, South, China, Cuba, Iran, Honduras, Philippines, Italy, Poland, Jamaica, Vietnam, Mexico, Portugal, Ireland, France, Dominican-Republic, Laos, Ecuador, Taiwan, Haiti, Columbia, Hungary, Guatemala, Nicaragua, Scotland, Thailand, Yugoslavia, El-Salvador, Trinadad and Tobago, Peru, Hong, Holand-Netherlands.
 \end{enumerate}
 \section{First look at the dataset}
-There are a lot more examples from the first class (<50k earnings). 
+There are a lot more examples from the first class (<50k earnings). If we always predict the majority class, we get accuracy of 76.07\%. This is a baseline accuracy, we obviously need result better than that. The accuracy metric is too biased and we will use the Kappa metric, since the classes are unbalanced. There are features of different scales. Two attributes have missing values: work class(6\%) and native country(2\%). There are no obvious correlation between the features and the output class \ref{fig:visual}.
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.3]{visualize_all}
+    \caption{Attributes correlation with output class visualized}
+    \label{fig:visual}
+\end{figure}
 
 \chapter{Analyze the data}
 \section{Handling missing values}
