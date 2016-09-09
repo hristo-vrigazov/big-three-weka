@@ -35,9 +35,11 @@ There are a lot more examples from the first class (<50k earnings). If we always
 \end{figure}
 
 \chapter{Analyze the data}
+Since there are 48842 instances, we will use hold out set. We will split the dataset and we will use only 75\% of it. We will use the other 25\% at the end, to test how our model generalizes. Since the attributes have a lot of different scales, we will almost certainly benefit from data transformations like normalization and standardization. There does not seem to be attributes with Gaussian-like distributions, so methods which assume normal distribution like Logistic Regression and Linear Discriminant Analysis. We have a lot of attributes, so we should consider removing some of them to remove the noise and speed up the model. Since there are a lot of points, k-NN will be very slow if we search every datapoint, so alternative methods should be used like KD-trees or locality sensitivity hashing. Also note that if features are on the same scale, Euclidean distance is fine, but if they are on different, Manhattan distance should be preferred.
 \section{Handling missing values}
-\section{Balancing classes}
+For this dataset, it looks like the most logical decision is to replace the missing values with the mean or median for every attribute, since imputing the rows will likely lose data in this noisy dataset.
 \section{Normalization and standardization}
+Standardization does not seem like a good solution, since the attributes do not look like Gaussian distributed.
 \section{Descriptive statistics}
 
 \chapter{Prepare data}
