@@ -58,6 +58,19 @@ In the normalized view, after evaluting attributes by their info gain and select
 
 \chapter{Evaluate algorithms}
 \section{Initial experiment design}
+We will evaluate the datasets described in the previous chapter, and for algorithms we will use:
+\begin{enumerate}
+    \item Naive Bayes
+    \item Logistic regression with ridge parameter $10^{-8}$
+    \item Pruned C4 decision tree with confidence factor 0.25 and 2 minimum objects
+    \item Linear Discriminant Analysis classifier
+    \item k-Nearest Neighbor with 3 neighbors and KD-tree for searching algorithm
+    \item Support vector machine using sequential minimal optimization for training and logistic regression for calibrator with radial basis function kernel and 0.001 tolerance parameter.
+    \item Random forest
+    \item Bootstraping aggregation
+    \item Adaboost with decision stump classifier run on 100 iterations
+    \item Stacking of C4 decision trees
+\end{enumerate}
 
 \chapter{Impove results}
 \section{Experiment for improving result}
