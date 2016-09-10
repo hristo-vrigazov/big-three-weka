@@ -44,8 +44,17 @@ Standardization does not seem like a good solution, since the attributes do not 
 \chapter{Prepare data}
 We will now present different views of the datasets. Note that in every view, the attribute Fnlwgt was removed.
 \section{Raw view of the dataset}
+The dataset as it was downloaded from UCI Machine Learning Repository \cite{uci-link}, with Fnlwgt removed.
 \section{Normalized view of the dataset}
+The dataset as it was downloaded from UCI Machine Learning Repository \cite{uci-link}, with Fnlwgt removed, after applying normalizing filter.
 \section{Dataset after feature selection}
+In the normalized view, after evaluting attributes by their info gain and selecting the top 8, we get the following attributes: \ref{fig:attr}.
+\begin{figure}
+    \centering
+    \includegraphics[scale=1]{selected_attibutes}
+    \caption{Selected attributes from feature selection}
+    \label{fig:attr}
+\end{figure}
 
 \chapter{Evaluate algorithms}
 \section{Initial experiment design}
