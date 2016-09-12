@@ -1,0 +1,27 @@
+Tester:     weka.experiment.PairedCorrectedTTester -G 4,5,6 -D 1 -R 2 -S 0.05 -result-matrix "weka.experiment.ResultMatrixPlainText -mean-prec 2 -stddev-prec 2 -col-name-width 0 -row-name-width 25 -mean-width 2 -stddev-width 2 -sig-width 1 -count-width 5 -print-col-names -print-row-names -enum-col-names"
+Analysing:  Kappa_statistic
+Datasets:   1
+Resultsets: 9
+Confidence: 0.05 (two tailed)
+Sorted by:  -
+Date:       9/12/16 11:44 PM
+
+
+Dataset                   (1) bayes.N | (2) func (3) tree (4) skle (5) lazy (6) tree (7) meta (8) meta (9) meta
+---------------------------------------------------------------------------------------------------------------
+adult-weka.filters.unsupe(100)   0.49 |   0.55 v   0.59 v   0.53 v   0.49     0.55 v   0.57 v   0.57 v   0.59 v
+---------------------------------------------------------------------------------------------------------------
+                              (v/ /*) |  (1/0/0)  (1/0/0)  (1/0/0)  (0/1/0)  (1/0/0)  (1/0/0)  (1/0/0)  (1/0/0)
+
+
+Key:
+(1) bayes.NaiveBayes '' 5995231201785697655
+(2) functions.Logistic '-R 1.0E-8 -M -1 -num-decimal-places 4' 3932117032546553727
+(3) trees.J48 '-C 0.25 -M 2' -217733168393644444
+(4) sklearn.ScikitLearnClassifier '-batch 100 -learner LDA' -6212485658537766441
+(5) lazy.IBk '-K 3 -W 0 -A \"weka.core.neighboursearch.KDTree -A \\\"weka.core.EuclideanDistance -R first-last\\\" -S weka.core.neighboursearch.kdtrees.SlidingMidPointOfWidestSide -W 0.01 -L 40 -N\"' -3080186098777067172
+(6) trees.RandomForest '-P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1' 1116839470751428698
+(7) meta.Bagging '-P 100 -S 1 -num-slots 1 -I 10 -W trees.REPTree -- -M 2 -V 0.001 -N 3 -S 1 -L -1 -I 0.0' -115879962237199703
+(8) meta.AdaBoostM1 '-P 100 -S 1 -I 100 -W trees.DecisionStump' -1178107808933117974
+(9) meta.Stacking '-X 10 -M \"trees.J48 -C 0.25 -M 2\" -S 1 -num-slots 1 -B \"trees.J48 -C 0.25 -M 2\" -B \"trees.J48 -C 0.1 -M 5\"' 5134738557155845452
+
