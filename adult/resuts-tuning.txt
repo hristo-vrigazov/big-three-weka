@@ -1,0 +1,25 @@
+Tester:     weka.experiment.PairedCorrectedTTester -G 4,5,6 -D 1 -R 2 -S 0.05 -result-matrix "weka.experiment.ResultMatrixPlainText -mean-prec 2 -stddev-prec 2 -col-name-width 0 -row-name-width 25 -mean-width 2 -stddev-width 2 -sig-width 1 -count-width 5 -print-col-names -print-row-names -enum-col-names"
+Analysing:  Kappa_statistic
+Datasets:   4
+Resultsets: 4
+Confidence: 0.05 (two tailed)
+Sorted by:  -
+Date:       9/13/16 9:32 PM
+
+
+Dataset                   (1) trees.J | (2) tree (3) tree (4) tree
+------------------------------------------------------------------
+'adult-weka.filters.unsup(100)   0.57 |   0.57     0.57     0.57  
+adult-weka.filters.unsupe(100)   0.59 |   0.60     0.59     0.59  
+adult-weka.filters.unsupe(100)   0.59 |   0.60     0.59     0.60  
+adult-weka.filters.unsupe(100)   0.59 |   0.60     0.59     0.60  
+------------------------------------------------------------------
+                              (v/ /*) |  (0/4/0)  (0/4/0)  (0/4/0)
+
+
+Key:
+(1) trees.J48 '-C 0.25 -M 2' -217733168393644444
+(2) trees.J48 '-C 0.4 -M 2' -217733168393644444
+(3) trees.J48 '-C 0.1 -M 2' -217733168393644444
+(4) trees.J48 '-C 0.5 -M 2' -217733168393644444
+
