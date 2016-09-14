@@ -25,7 +25,7 @@ All attributes are continuous
 \end{enumerate}
 
 \section{First look at the dataset}
-There are a lot of features that seem to separate the features quite well. For this reason, discriminant analysis looks very promising, since it finds a linear combination of features that best suits the problem.
+There are a lot of features that seem to separate the features quite well. For this reason, discriminant analysis looks very promising, since it finds a linear combination of features that best suits the problem. The baseline accuracy is 40\%, since that is what we get when we always predict the major class.
 
 \chapter{Analyze the data}
 \section{Handling missing values}
@@ -42,6 +42,17 @@ The dataset after applying the standardize filter
 
 \chapter{Evaluate algorithms}
 \section{Initial experiment design}
+We will run the experiment design on the the two datasets descibed in the previous chapter (raw and standardized) on the following algorithms:
+\begin{enumerate}
+    \item Decision tree - C4
+    \item Naive Bayes
+    \item Logistic regression
+    \item Linear discriminant analysis
+    \item Quadratic discriminant analysis
+    \item Support vector machine using sequantial minimal optimization
+    \item Multilayer perceptron 
+    \item Nearest neighbour
+\end{enumerate}
 
 \chapter{Impove results}
 \section{Experiment for improving result}
